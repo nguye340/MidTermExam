@@ -11,19 +11,23 @@ package status;
  */
 public class StausUser 
 {
-   public enum code{ZERO,ONE,TWO,THREE};
-   public void statusDetail(String code)
+
+    void statusDetail(String code) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+   public enum Code{ZERO,ONE,TWO,THREE};
+   public void statusDetail(Code code)
 {
-switch(code.toUpperCase())
+switch(code)
         {
-        case "ZERO": System.out.println("REJECTED");
+        case ZERO: System.out.println("REJECTED");
         break;
-        case "ONE": System.out.println("PENDING");
+        case ONE: System.out.println("PENDING");
         break;
-        case "TWO":
+        case TWO:
         System.out.println("PROCESSING");
         break;
-        case "THREE": 
+        case THREE: 
             System.out.println("APPROVED");
         break;
         default:
